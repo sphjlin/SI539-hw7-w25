@@ -65,11 +65,10 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 // change volume
 document.querySelector("#slider").addEventListener("click", function() {
-	video.volume = document.getElementById("slider").value / 100;
-	document.getElementById("volume").innerText = document.getElementById("slider").value + "%";
+	video.volume = video.volume = this.value / 100;
 	console.log("The current value is " + video.volume);
-	console.log("<span id = 'volume'>" + video.volume * 100 + "%" + "</span>");
-	document.getElementById("volume").innerText = video.volume * 100 + "%";
+	console.log(document.querySelector("#volume"));
+	document.getElementById("volume").innerText =  this.value + "%";
 });
 
 // vintage video style
